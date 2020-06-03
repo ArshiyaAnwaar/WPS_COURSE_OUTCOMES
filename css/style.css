@@ -1,0 +1,41 @@
+.navbar {
+        background-color: rgb(66, 52, 128);
+        border-color: rgb(31, 31, 37);
+        border-radius: 0;
+        font-size: x-large;
+        
+    }
+ body  {
+                    background-image: url('https://backgrounddownload.com/wp-content/uploads/2018/09/vector-background-light-blue-1.jpg');
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    font-size: larger; 
+                    font-style: bold;
+      }
+      form{
+          font-size: x-large;
+      }
+    table > thead > tr > th{
+        border:1px solid black;
+    }
+    table > tbody > tr > td{
+        border:1px solid black;
+    }
+    #create_pdf,#create_graph,#btn{
+        background-color: rgb(66, 52, 128);
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px
+    }
+    input[type=radio   ]:not(old){
+        width   : 50px;
+        height: 1em;
+        background-color: #0f0f0f;
+        margin  : 0;
+        padding : 0;
+        
+      }

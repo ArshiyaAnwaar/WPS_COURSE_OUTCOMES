@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+            <link rel="stylesheet" type="text/css" href="./style.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+            <div style="display:inline-block;vertical-align:top;">
+              <img  src="http://www.vce.ac.in/img/vlogo.gif" alt="img" height='100' width='100'/>
+            </div>
+            <div style="display:inline-block;">
+                <div></div><br><br>
+                <div style="font-size: xx-large;"><b>Vasavi College of Engineering</b></div>
+            </div>
+        <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                  </div>
+                <ul class="nav navbar-nav">
+                        <li><a>VCE</a></li>
+                      </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="courses">Courses</a></li>
+                    <li><a href="/" ><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+                  </ul>
+                </div>
+              </nav>
+            </head>
+    <body>
+        <h2>Mark Sheet</h2>
+        <form action="/demo1" method="post">
+                Threshold<input type="number" name="th" id="th"/>
+            <table><thead><tr><th>STUDENT</th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th><th>Q5</th><th>Q6</th><th>Q7</th><th>Q8</th><th>Q9</th><th>Q10</th><th>Q11</th><th>Q12</th></tr></thead><hr><tr><td></td>
+        <script>
+            for (let i=0;i<12;i++)
+           {
+              let s="course_outcomes"+i;
+             document.write("<td><select name="+s+"><option value=\"1\">CO1</option><option value=\"2\">CO2</option><option value=\"3\">CO3</option><option value=\"4\">CO4</option><option value=\"5\">CO5</option></select></td>");
+           }
+        </script>
+        </tr>
+        <% data.name.forEach((item)=>{%> 
+            <tr>
+            <td><%=item%></td>  
+            <script>
+            for(let i=0;i<12;i++)
+                {
+                 let s="stu"+<%=item%>+i;
+                 //document.writeln(s);
+                 document.write("<td><input type=\"text\" name="+s+" id="+s+"/></td>");
+                }
+            </script>
+            </tr>
+            <%});%> 
+        </table>
+        <input type="submit" id="btn" value="next"/>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <link rel="stylesheet" type="text/css" href="style.css"/>
+        <table>
+                <tr><td rowspan="8"><img src="http://www.vce.ac.in/img/vlogo.gif" height='100' width='100'/></td><td><h1>Vasavi College of Engineering</h1></td></tr>
+        </table>
+        
+    </head>
+    <body>
+        <h2>Mark Sheet</h2>
+        <form action="ss" method="post">
+                Threshold<input type="number" name="th" id="th"/>
+            <table><tr><th>STUDENT</th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th><th>Q5</th><th>Q6</th></tr><hr><tr><td></td>
+        <script>
+            for (let i=0;i<5;i++)
+           {
+              let s="course_outcomes"+i;
+              //document.write(s);
+             document.write("<td><select name="+s+"><option value=\"1\">CO1</option><option value=\"2\">CO2</option><option value=\"3\">CO3</option><option value=\"4\">CO4</option><option value=\"5\">CO5</option></select></td>");
+           }
+        </script>
+        </tr>
+        <% data.name.forEach((item)=>{%>
+            <tr>
+            <td><%=item%></td>  
+            <script>
+            for(let i=0;i<5;i++)
+                {
+                 let s="stu"+<%=item%>+i;
+                 //document.writeln(s);
+                 document.write("<td><input type=\"text\" name="+s+" id="+s+"/></td>");
+                }
+            </script>
+            </tr>
+            <%});%> 
+        </table>
+        <input type="submit" value="submit"/>
+        </form>
+    </body>
+</html>

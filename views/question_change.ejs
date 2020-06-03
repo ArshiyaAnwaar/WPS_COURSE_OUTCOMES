@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Home Page</title> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <!--<table id='h>
+            <tr><td rowspan="8"><img src="http://www.vce.ac.in/img/vlogo.gif" height='100' width='100'/></td><td><h1>Vasavi College of Engineering</h1></td></tr>
+    </table>--><div style="display:inline-block;vertical-align:top;">
+      <img  src="http://www.vce.ac.in/img/vlogo.gif" alt="img" height='100' width='100'/>
+    </div>
+    <div style="display:inline-block;">
+        <div></div><br><br>
+        <div style="font-size: xx-large;"><b>Vasavi College of Engineering</b></div>
+    </div>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+          </div><
+          <ul class="nav navbar-nav">
+            <li><a>VCE</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="courses">Courses</a></li>
+            <li><a href="edit">Edit</a></li>
+            <li><a href="/" ><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+          </ul>
+        </div>
+      </nav>
+</head>  
+<body align="center">
+        <form action="/edit_marks" method="post">
+            <b>Select course:</b>&nbsp;&nbsp;<select name="courses">
+                    <% data.name.forEach((item)=>{%> 
+                        <option><%=item%></option>
+                        <%});%>  
+            </select><br>   <br><br><br>
+            <input type="radio" name="Test" value="internal_1"/>Internal  1&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="Test" value="internal_2"/>Internal  2<br><br><br><br>
+            <input type="radio" name="Test" value="external"/>External&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="Test" value="assignments"/>Assignments<br><br><br><br>
+            <input type="radio" name="Test" value="quiz"/>Quiz<br><br><br><br>
+            
+            <input type="submit" id="btn" value="Next"/>
+        
+        </form>
+    <form action="/" method="POST">
+        Q1<input type="checkbox" id="int_1"/>
+    </form>
